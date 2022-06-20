@@ -6,6 +6,6 @@ Add-ons can be installed and configured via the Home Assistant frontend on syste
 
 ## Add-ons provided by this repository
 
-### UCTRONICS OLED Display (Python)
+### OLED Display (Python)
 In Development
-Completed project for displaying to UCTronics OLED written in Python
+Completed project for displaying to SSD1306 OLED written in Python
