@@ -57,8 +57,8 @@ draw = ImageDraw.Draw(image)
 # Load default font.
 # font = ImageFont.load_default()
 p = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 9)
-p_bold = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", 9)
-small = ImageFont.truetype("usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 8)
+p_bold = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", 12)
+small = ImageFont.truetype("usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 12)
 smaller = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 7)
 
 
@@ -210,18 +210,18 @@ def show_splash():
     logo = ImageOps.invert(logo)  
     
     # Merge HA Logo with Canvas.
-    image.paste(logo,(-2,3))
+    image.paste(logo,(51,2))
 
-    draw.line([(34, 16),(123,16)], fill=255, width=1)
+    draw.line([(5,48),(123,48 )], fill=255, width=1)
 
     ln1 = "Home Assistant"
-    ln1_x = get_text_center(ln1, p_bold, 78)
-    draw.text((ln1_x, 4), ln1, font=p_bold, fill=255)
+    ln1_x = get_text_center(ln1, p_bold, 64)
+    draw.text((ln1_x, 33), ln1, font=p_bold, fill=255)
 
     # Write Test, Eventually will get from HA API.
     ln2 = 'OS '+ os_version + ' - ' + core_version
-    ln2_x = get_text_center(ln2, small, 78)
-    draw.text((ln2_x, 20), ln2, font=small, fill=255)
+    ln2_x = get_text_center(ln2, small, 64)
+    draw.text((ln2_x, 52), ln2, font=small, fill=255)
 
 
     # Display Image to OLED
