@@ -33,7 +33,7 @@
         "Show_Memory_Info": true,
         "Show_CPU_Info": true,
         "Temperature_Unit": "C",
-        "Slide_Duration": 5,
+        "Slide_Duration": 10,
         "Stop_Auto_Run": false
     },
     "schema": {
