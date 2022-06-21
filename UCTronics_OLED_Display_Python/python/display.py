@@ -83,15 +83,15 @@ def show_storage():
     storage = storage.split(',')
 
     # Clear Canvas
-    draw.rectangle((0,0,128,32), outline=0, fill=0)
-
+    draw.rectangle((0, 0, width, height), outline=0, fill=0)
+    
     # Resize and merge icon to Canvas
-    icon = img_disk.resize([26,26])  
-    image.paste(icon,(-2,3))
+    icon = img_disk.resize([32,32])  
+    image.paste(icon,(0,0))
 
-    draw.text((29, 0), "USED: " + storage[0] + ' GB \n', font=small, fill=255)
-    draw.text((29, 11), "TOTAL: " + storage[1] + ' GB \n', font=small, fill=255)
-    draw.text((29, 21), "UTILISED: " + storage[2] + ' \n', font=small, fill=255) 
+    draw.text((36, 8), "USED: " + storage[0] + ' GB \n', font=small, fill=255)
+    draw.text((6, 36), "TOTAL: " + storage[1] + ' GB \n', font=small, fill=255)
+    draw.text((6, 52), "UTILISED: " + storage[2] + ' \n', font=small, fill=255) 
 
     #image.save(r"./img/examples/storage.png")    
 
@@ -206,13 +206,13 @@ def show_splash():
     draw.rectangle((0, 0, width, height), outline=0, fill=0)
 
     # Get HA Logo and Resize
-    logo = img_ha_logo.resize([30,30])
+    logo = img_ha_logo.resize([32,32])
     logo = ImageOps.invert(logo)  
     
     # Merge HA Logo with Canvas.
-    image.paste(logo,(51,1))
+    image.paste(logo,(47,0))
 
-    draw.line([(6,49),(123,49)], fill=255, width=1)
+    draw.line([(5,48),(123,48)], fill=255, width=1)
 
     ln1 = "Home Assistant"
     ln1_x = get_text_center(ln1, p_bold, 64)
@@ -221,7 +221,7 @@ def show_splash():
     # Write Test, Eventually will get from HA API.
     ln2 = 'OS '+ os_version + ' - ' + core_version
     ln2_x = get_text_center(ln2, small, 64)
-    draw.text((ln2_x, 53), ln2, font=small, fill=255)
+    draw.text((ln2_x, 52), ln2, font=small, fill=255)
 
 
     # Display Image to OLED
