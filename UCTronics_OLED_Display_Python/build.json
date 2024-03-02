@@ -3,7 +3,7 @@
     "shadow_repository": "ghcr.io/home-assistant",
     "build_from": {
         "armhf": "tianon/raspbian:bullseye-slim",
-        "aarch64": "homeassistant/aarch64-homeassistant-base:7.2.0"
+        "aarch64": "tianon/raspbian:bullseye-slim"
     },
     "args": {
         "BASHIO_VERSION": "0.13.1",
