@@ -32,7 +32,7 @@ DURATION = 5
 
 
 # Create the I2C interface.
-i2c = busio.I2C(board.SCL, board.SDA)
+i2c = busio.I2C(5, 3)
 
 # Create the SSD1306 OLED class.
 # The first two parameters are the pixel width and pixel height.  Change these to the right size for your display!
